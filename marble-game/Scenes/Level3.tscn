@@ -37,6 +37,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxw0v"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pcch"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
 [node name="Level3" type="Node2D" unique_id=1560589329]
 script = ExtResource("1_cp0jt")
 
@@ -90,6 +98,38 @@ offset_bottom = -28.333328
 texture_normal = ExtResource("12_ms3ee")
 texture_pressed = ExtResource("13_ktnig")
 texture_hover = ExtResource("14_nfsas")
+
+[node name="RotationInputBox" type="LineEdit" parent="PlatformEditor2" unique_id=1418619044]
+offset_left = 2.5
+offset_top = -14.166676
+offset_right = 95.0
+offset_bottom = 7.8333244
+theme_override_colors/font_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/font_selected_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/font_outline_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/font_placeholder_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/caret_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/selection_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_xxw0v")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5pcch")
+alignment = 1
+
+[node name="TimerInputBox" type="LineEdit" parent="PlatformEditor2" unique_id=617798088]
+offset_left = 2.499959
+offset_top = 20.833344
+offset_right = 94.99996
+offset_bottom = 42.833344
+theme_override_colors/font_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/font_selected_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/font_outline_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/font_placeholder_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/caret_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_colors/selection_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_xxw0v")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5pcch")
+alignment = 1
 
 [node name="Basic Platform 1" parent="." unique_id=983039995 instance=ExtResource("6_kg31f")]
 position = Vector2(105, 583.00006)
