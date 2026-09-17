@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2cpg0k1tgj3"
-path="res://.godot/imported/MenuButtonHover.png-19fa3c7a07a66902d9ad61255ac40035.ctex"
+uid="uid://baxaoiox5tg83"
+path="res://.godot/imported/MenuBarUI.png-ac94cc54013a40eadc894a7ca56fcf2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/MenuButtonHover.png"
-dest_files=["res://.godot/imported/MenuButtonHover.png-19fa3c7a07a66902d9ad61255ac40035.ctex"]
+source_file="res://Assets/Images/LevelUI/MenuBarUI.png"
+dest_files=["res://.godot/imported/MenuBarUI.png-ac94cc54013a40eadc894a7ca56fcf2d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vg664vl6hf5c"
-path="res://.godot/imported/MenuButtonPressed.png-87c9e43d2c374b6eff77baf2e6af3e95.ctex"
+uid="uid://1r1l0whv1rxb"
+path="res://.godot/imported/Level2Heading.png-eaf6d1e193933fe2c4069c3fdf8da20d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/MenuButtonPressed.png"
-dest_files=["res://.godot/imported/MenuButtonPressed.png-87c9e43d2c374b6eff77baf2e6af3e95.ctex"]
+source_file="res://Assets/Images/LevelUI/Level2Heading.png"
+dest_files=["res://.godot/imported/Level2Heading.png-eaf6d1e193933fe2c4069c3fdf8da20d.ctex"]
 
 [params]
 
