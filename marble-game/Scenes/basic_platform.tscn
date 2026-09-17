@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://b76w6ymskwvkg"]
 
 [ext_resource type="Texture2D" uid="uid://cp0gragflxy12" path="res://images/simple wood texture.png" id="1_abi2v"]
+[ext_resource type="Script" uid="uid://bcped6gjhh2yl" path="res://Scenes/Platform.gd" id="1_u84qy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbwd6"]
 size = Vector2(270, 202)
 
-[node name="Basic Platform" type="StaticBody2D" unique_id=1878829057]
+[node name="Basic Platform" type="CharacterBody2D" unique_id=983039995]
+scale = Vector2(0.4, 0.4)
+input_pickable = true
+script = ExtResource("1_u84qy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1702816497]
 shape = SubResource("RectangleShape2D_sbwd6")

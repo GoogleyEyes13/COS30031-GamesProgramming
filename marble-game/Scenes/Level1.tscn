@@ -1,3 +1,61 @@
 [gd_scene format=3 uid="uid://b20pmdcjjblvj"]
 
+[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/basic_platform.tscn" id="1_2llne"]
+
 [node name="Level1" type="Node2D" unique_id=1786507126]
+
+[node name="UI Bar Background" type="ColorRect" parent="." unique_id=1069609653]
+z_index = -10
+offset_top = 502.0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0.34509805, 0.2, 0, 0.34117648)
+
+[node name="UI Bar Section 1" type="ColorRect" parent="." unique_id=1867858418]
+z_index = -8
+offset_left = 58.0
+offset_top = 514.0
+offset_right = 239.0
+offset_bottom = 636.0
+mouse_filter = 2
+color = Color(1, 0.92941177, 0.7490196, 0.39215687)
+
+[node name="UI Bar Section 2" type="ColorRect" parent="." unique_id=2011533528]
+z_index = -8
+offset_left = 342.0
+offset_top = 514.0
+offset_right = 523.0
+offset_bottom = 636.0
+mouse_filter = 2
+color = Color(1, 0.92941177, 0.7490196, 0.39215687)
+
+[node name="UI Bar Section 3" type="ColorRect" parent="." unique_id=934373753]
+z_index = -8
+offset_left = 629.0
+offset_top = 514.0
+offset_right = 810.0
+offset_bottom = 636.0
+mouse_filter = 2
+color = Color(1, 0.92941177, 0.7490196, 0.39215687)
+
+[node name="UI Bar Section 4" type="ColorRect" parent="." unique_id=406114475]
+z_index = -8
+offset_left = 913.0
+offset_top = 514.0
+offset_right = 1094.0
+offset_bottom = 636.0
+mouse_filter = 2
+color = Color(1, 0.92941177, 0.7490196, 0.39215687)
+
+[node name="Basic Platform 1" parent="." unique_id=1878829057 instance=ExtResource("1_2llne")]
+position = Vector2(149.00002, 576)
+
+[node name="Basic Platform 2" parent="." unique_id=983039995 instance=ExtResource("1_2llne")]
+position = Vector2(433, 576.99994)
+
+[node name="Basic Platform 3" parent="." unique_id=1928631366 instance=ExtResource("1_2llne")]
+position = Vector2(719.9999, 576.99994)
+
+[node name="Basic Platform 4" parent="." unique_id=402526477 instance=ExtResource("1_2llne")]
+position = Vector2(1004.99994, 576.99994)
