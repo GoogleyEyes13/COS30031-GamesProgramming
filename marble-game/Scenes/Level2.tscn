@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://be5jvciglygnw" path="res://Assets/Images/LevelUI/ExitButtonNormal.png" id="12_sgc6j"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_xx40l"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_utdxf"]
+[ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/OneByThreePlatform.tscn" id="16_xx40l"]
+[ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/SquareBlock.tscn" id="17_utdxf"]
 
 [node name="Level2" type="Node2D" unique_id=1671823636]
 script = ExtResource("1_70df5")
@@ -80,11 +82,11 @@ position = Vector2(340, 583)
 [node name="Basic Platform 3" parent="." unique_id=348858424 instance=ExtResource("8_2jwna")]
 position = Vector2(577, 583)
 
-[node name="Basic Platform 4" parent="." unique_id=14591718 instance=ExtResource("8_2jwna")]
-position = Vector2(812.9999, 583)
+[node name="OneByThreePlatform" parent="." unique_id=970050617 instance=ExtResource("16_xx40l")]
+position = Vector2(812, 583)
 
-[node name="Basic Platform 5" parent="." unique_id=1992410550 instance=ExtResource("8_2jwna")]
-position = Vector2(1048, 583)
+[node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("17_utdxf")]
+position = Vector2(1042, 583)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
