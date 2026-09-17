@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://ddjbsqcqin4tx" path="res://Assets/Images/LevelUI/RestartButtonNormal.png" id="8_2h8qs"]
 [ext_resource type="Texture2D" uid="uid://cw21wee136h5v" path="res://Assets/Images/LevelUI/RestartButtonPressed.png" id="9_rpty4"]
 [ext_resource type="Texture2D" uid="uid://bufgew8kjc5f1" path="res://Assets/Images/LevelUI/RestartButtonHover.png" id="10_6jj8j"]
+[ext_resource type="Texture2D" uid="uid://dll1r5a0vdq5h" path="res://Assets/Images/LevelUI/PlatformEditor.png" id="12_rpty4"]
+[ext_resource type="Texture2D" uid="uid://be5jvciglygnw" path="res://Assets/Images/LevelUI/ExitButtonNormal.png" id="12_ubfni"]
+[ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_ug0sv"]
+[ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_0wsr5"]
 
 [node name="Level1" type="Node2D" unique_id=1786507126]
 script = ExtResource("1_6ll4n")
@@ -50,6 +54,22 @@ texture_normal = ExtResource("8_2h8qs")
 texture_pressed = ExtResource("9_rpty4")
 texture_hover = ExtResource("10_6jj8j")
 
+[node name="PlatformEditor" type="Sprite2D" parent="." unique_id=505540364]
+texture_filter = 1
+position = Vector2(1007, 110)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("12_rpty4")
+
+[node name="ExitButton" type="TextureButton" parent="PlatformEditor" unique_id=1892082446]
+texture_filter = 1
+offset_left = 84.16667
+offset_top = -47.499996
+offset_right = 103.33336
+offset_bottom = -28.333328
+texture_normal = ExtResource("12_ubfni")
+texture_pressed = ExtResource("13_ug0sv")
+texture_hover = ExtResource("14_0wsr5")
+
 [node name="Basic Platform 1" parent="." unique_id=1878829057 instance=ExtResource("1_2llne")]
 position = Vector2(105, 583.00006)
 
@@ -67,3 +87,4 @@ position = Vector2(1048, 583)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
