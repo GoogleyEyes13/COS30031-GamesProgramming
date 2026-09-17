@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b76w6ymskwvkg"]
 
-[ext_resource type="Texture2D" uid="uid://cp0gragflxy12" path="res://Assets/images/simple wood texture.png" id="1_abi2v"]
+[ext_resource type="Texture2D" uid="uid://cp0gragflxy12" path="res://Assets/Images/simple wood texture.png" id="1_abi2v"]
 [ext_resource type="Script" uid="uid://bcped6gjhh2yl" path="res://Assets/Scripts/Platform.gd" id="1_u84qy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbwd6"]
 size = Vector2(270, 202)
 
 [node name="Basic Platform" type="CharacterBody2D" unique_id=983039995]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.35, 0.35)
 input_pickable = true
 script = ExtResource("1_u84qy")
 

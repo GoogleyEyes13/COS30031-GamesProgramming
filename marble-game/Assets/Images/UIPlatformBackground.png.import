@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp0gragflxy12"
-path="res://.godot/imported/simple wood texture.png-08fd0f5ad56e38d45bf07998e42da1f5.ctex"
+uid="uid://bcwfy5entqxr5"
+path="res://.godot/imported/UIPlatformBackground.png-7c295d345e4f3f60af519469fc6dda3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/simple wood texture.png"
-dest_files=["res://.godot/imported/simple wood texture.png-08fd0f5ad56e38d45bf07998e42da1f5.ctex"]
+source_file="res://Assets/Images/UIPlatformBackground.png"
+dest_files=["res://.godot/imported/UIPlatformBackground.png-7c295d345e4f3f60af519469fc6dda3c.ctex"]
 
 [params]
 
