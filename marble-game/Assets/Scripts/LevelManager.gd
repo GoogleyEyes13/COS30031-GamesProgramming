@@ -8,7 +8,7 @@ var GridSize: float
 
 
 func _ready() -> void:
-	PlatformEditor.visible = true
+	PlatformEditor.visible = false
 	
 	# Connecting signal from platforms
 	for child in get_children():
@@ -51,6 +51,7 @@ func _on_restart_button_pressed() -> void:
 
 func _on_platform_grabbed(PlatformName):
 	print("Platform grabbed: ", PlatformName)
+	PlatformEditor.visible = true
 
 
 func _on_exit_button_pressed() -> void:
