@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://be5jvciglygnw" path="res://Assets/Images/LevelUI/ExitButtonNormal.png" id="12_ubfni"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_ug0sv"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_0wsr5"]
+[ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/OneByThreePlatform.tscn" id="16_0wsr5"]
+[ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/SquareBlock.tscn" id="16_ug0sv"]
 
 [node name="Level1" type="Node2D" unique_id=1786507126]
 script = ExtResource("1_6ll4n")
@@ -70,20 +72,20 @@ texture_normal = ExtResource("12_ubfni")
 texture_pressed = ExtResource("13_ug0sv")
 texture_hover = ExtResource("14_0wsr5")
 
-[node name="Basic Platform 1" parent="." unique_id=1878829057 instance=ExtResource("1_2llne")]
+[node name="Basic Platform" parent="." unique_id=983039995 instance=ExtResource("1_2llne")]
 position = Vector2(105, 583.00006)
 
-[node name="Basic Platform 2" parent="." unique_id=983039995 instance=ExtResource("1_2llne")]
-position = Vector2(340, 583)
+[node name="Basic Platform2" parent="." unique_id=995872866 instance=ExtResource("1_2llne")]
+position = Vector2(339, 583)
 
-[node name="Basic Platform 3" parent="." unique_id=1928631366 instance=ExtResource("1_2llne")]
-position = Vector2(577, 583)
+[node name="Basic Platform3" parent="." unique_id=1165172434 instance=ExtResource("1_2llne")]
+position = Vector2(577, 583.00006)
 
-[node name="Basic Platform 4" parent="." unique_id=402526477 instance=ExtResource("1_2llne")]
-position = Vector2(812.9999, 583)
+[node name="OneByThreePlatform" parent="." unique_id=970050617 instance=ExtResource("16_0wsr5")]
+position = Vector2(812, 583)
 
-[node name="Basic Platform 5" parent="." unique_id=580179827 instance=ExtResource("1_2llne")]
-position = Vector2(1048, 583)
+[node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("16_ug0sv")]
+position = Vector2(1042, 583)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]

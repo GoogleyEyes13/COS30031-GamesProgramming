@@ -3,7 +3,7 @@ extends Node2D
 @onready var PlatformEditor = $PlatformEditor
 
 # Setting grid size
-var GridColumns: int = 24
+var GridColumns: int = 26
 var GridSize: float
 
 

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://babtnl6mvg0uc"]
+
+[ext_resource type="Script" uid="uid://bcped6gjhh2yl" path="res://Assets/Scripts/Platform.gd" id="1_hdlxv"]
+[ext_resource type="Texture2D" uid="uid://daeu1ips4js05" path="res://Assets/Images/Platforms/OneByThreePlatform.png" id="1_ryobx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryobx"]
+size = Vector2(132, 44)
+
+[node name="OneByThreePlatform" type="CharacterBody2D" unique_id=970050617]
+input_pickable = true
+script = ExtResource("1_hdlxv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1159543430]
+shape = SubResource("RectangleShape2D_ryobx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1623180672]
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("1_ryobx")

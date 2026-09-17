@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://boqbcqwscstha"]
+
+[ext_resource type="Script" uid="uid://bcped6gjhh2yl" path="res://Assets/Scripts/Platform.gd" id="1_jfgwb"]
+[ext_resource type="Texture2D" uid="uid://do8b36yr7mo5h" path="res://Assets/Images/Platforms/SquarePlatform.png" id="1_wcmpg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfgwb"]
+size = Vector2(96, 96)
+
+[node name="SquarePlatform" type="CharacterBody2D" unique_id=502299360]
+scale = Vector2(0.92, 0.92)
+input_pickable = true
+script = ExtResource("1_jfgwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273216075]
+shape = SubResource("RectangleShape2D_jfgwb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=239330323]
+texture_filter = 1
+texture = ExtResource("1_wcmpg")
