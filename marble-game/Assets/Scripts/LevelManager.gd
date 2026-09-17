@@ -51,6 +51,19 @@ func _on_restart_button_pressed() -> void:
 
 func _on_platform_grabbed(PlatformName):
 	print("Platform grabbed: ", PlatformName)
+	
+	match PlatformName:
+		"Basic Platform":
+			PlatformEditor.frame = 0
+		"Basic Platform2":
+			PlatformEditor.frame = 0
+		"Basic Platform3":
+			PlatformEditor.frame = 0
+		"SquarePlatform":
+			PlatformEditor.frame = 1
+		"OneByThreePlatform":
+			PlatformEditor.frame = 2
+	
 	PlatformEditor.visible = true
 
 

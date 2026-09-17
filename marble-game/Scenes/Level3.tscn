@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ddjbsqcqin4tx" path="res://Assets/Images/LevelUI/RestartButtonNormal.png" id="8_kg31f"]
 [ext_resource type="Texture2D" uid="uid://cw21wee136h5v" path="res://Assets/Images/LevelUI/RestartButtonPressed.png" id="9_ncjpd"]
 [ext_resource type="Texture2D" uid="uid://bufgew8kjc5f1" path="res://Assets/Images/LevelUI/RestartButtonHover.png" id="10_ffsx8"]
-[ext_resource type="Texture2D" uid="uid://dll1r5a0vdq5h" path="res://Assets/Images/LevelUI/PlatformEditor.png" id="11_t5kwq"]
+[ext_resource type="Texture2D" uid="uid://dll1r5a0vdq5h" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditor.png" id="11_t5kwq"]
 [ext_resource type="Texture2D" uid="uid://be5jvciglygnw" path="res://Assets/Images/LevelUI/ExitButtonNormal.png" id="12_ms3ee"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_ktnig"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_nfsas"]

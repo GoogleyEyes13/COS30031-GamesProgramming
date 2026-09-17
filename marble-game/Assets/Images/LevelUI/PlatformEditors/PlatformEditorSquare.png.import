@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dll1r5a0vdq5h"
-path="res://.godot/imported/PlatformEditor.png-2122865875d259bd62483d15ec425bdd.ctex"
+uid="uid://c2as7h7jgeejg"
+path="res://.godot/imported/PlatformEditorSquare.png-d41f04d7f14e7a8d46e00e337edb54b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/LevelUI/PlatformEditor.png"
-dest_files=["res://.godot/imported/PlatformEditor.png-2122865875d259bd62483d15ec425bdd.ctex"]
+source_file="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorSquare.png"
+dest_files=["res://.godot/imported/PlatformEditorSquare.png-d41f04d7f14e7a8d46e00e337edb54b8.ctex"]
 
 [params]
 
