@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://d2cpg0k1tgj3" path="res://Assets/Images/LevelUI/MenuButtonHover.png" id="5_m7vvj"]
 [ext_resource type="Texture2D" uid="uid://djvq4cjdps6j7" path="res://Assets/Images/LevelUI/Level3Heading.png" id="6_43mlh"]
 [ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/BasicPlatform.tscn" id="6_kg31f"]
+[ext_resource type="Texture2D" uid="uid://ddjbsqcqin4tx" path="res://Assets/Images/LevelUI/RestartButtonNormal.png" id="8_kg31f"]
+[ext_resource type="Texture2D" uid="uid://cw21wee136h5v" path="res://Assets/Images/LevelUI/RestartButtonPressed.png" id="9_ncjpd"]
+[ext_resource type="Texture2D" uid="uid://bufgew8kjc5f1" path="res://Assets/Images/LevelUI/RestartButtonHover.png" id="10_ffsx8"]
 
 [node name="Level3" type="Node2D" unique_id=1560589329]
 script = ExtResource("1_cp0jt")
@@ -37,6 +40,16 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(0, 3.5)
 texture = ExtResource("6_43mlh")
 
+[node name="RestartButton" type="TextureButton" parent="UI Menu Bar Background" unique_id=363093984]
+texture_filter = 1
+offset_left = 466.0
+offset_top = -11.0
+offset_right = 571.0
+offset_bottom = 11.0
+texture_normal = ExtResource("8_kg31f")
+texture_pressed = ExtResource("9_ncjpd")
+texture_hover = ExtResource("10_ffsx8")
+
 [node name="Basic Platform 1" parent="." unique_id=983039995 instance=ExtResource("6_kg31f")]
 position = Vector2(105, 583.00006)
 
@@ -53,3 +66,4 @@ position = Vector2(812.9999, 583)
 position = Vector2(1048, 583)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
