@@ -1,6 +1,11 @@
 extends Node2D
 
 @onready var PlatformEditor = $PlatformEditor
+var SelectedPlatform = null
+
+# Rotation and timer labels
+@onready var RotationInputBox = $PlatformEditor/RotationInputBox
+@onready var TimerInputBox = $PlatformEditor/TimerInputBox
 
 # Setting grid size
 var GridColumns: int = 26
@@ -49,10 +54,12 @@ func _on_restart_button_pressed() -> void:
 	print("Restart button pressed")
 
 
-func _on_platform_grabbed(PlatformName):
-	print("Platform grabbed: ", PlatformName)
+func _on_platform_grabbed(Platform):
+	print("Platform grabbed: ", Platform.name)
 	
-	match PlatformName:
+	SelectedPlatform = Platform
+	
+	match Platform.name:
 		"Basic Platform":
 			PlatformEditor.frame = 0
 		"Basic Platform2":
@@ -64,6 +71,9 @@ func _on_platform_grabbed(PlatformName):
 		"OneByThreePlatform":
 			PlatformEditor.frame = 2
 	
+	# Update the rotation text box to match the selected platform
+	RotationInputBox.text = str(int(fmod(Platform.rotation_degrees, 360.0)))
+	
 	PlatformEditor.visible = true
 
 
@@ -71,3 +81,15 @@ func _on_exit_button_pressed() -> void:
 	# Closing the Platform editor
 	PlatformEditor.visible = false
 	print("Platform editor exited")
+
+
+func _on_rotation_input_box_text_submitted(new_text: String) -> void:
+	if SelectedPlatform == null:
+		return
+	
+	var Rotation = float(new_text)
+	SelectedPlatform.rotate_platform(Rotation)
+	
+	# Update input labels
+	RotationInputBox.text = str(int(fmod(SelectedPlatform.rotation_degrees, 360.0)))
+	

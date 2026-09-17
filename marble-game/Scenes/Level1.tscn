@@ -149,3 +149,4 @@ position = Vector2(1042, 583)
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="text_submitted" from="PlatformEditor/RotationInputBox" to="." method="_on_rotation_input_box_text_submitted"]

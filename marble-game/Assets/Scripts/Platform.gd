@@ -17,6 +17,10 @@ func _input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			if event.pressed:
 				is_grabbed = true
 				print("Grabbed: ", name)
-				PlatformGrabbed.emit(name)
+				PlatformGrabbed.emit(self)
 			else:
 				is_grabbed = false
+
+
+func rotate_platform(Rotation) -> void:
+	rotation_degrees = Rotation

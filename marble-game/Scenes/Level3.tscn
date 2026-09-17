@@ -83,13 +83,13 @@ texture_normal = ExtResource("8_kg31f")
 texture_pressed = ExtResource("9_ncjpd")
 texture_hover = ExtResource("10_ffsx8")
 
-[node name="PlatformEditor2" type="AnimatedSprite2D" parent="." unique_id=1166862166]
+[node name="PlatformEditor" type="AnimatedSprite2D" parent="." unique_id=1166862166]
 texture_filter = 1
 position = Vector2(1007, 110)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_85b6l")
 
-[node name="ExitButton" type="TextureButton" parent="PlatformEditor2" unique_id=1744202020]
+[node name="ExitButton" type="TextureButton" parent="PlatformEditor" unique_id=1744202020]
 texture_filter = 1
 offset_left = 84.16667
 offset_top = -47.499996
@@ -99,7 +99,7 @@ texture_normal = ExtResource("12_ms3ee")
 texture_pressed = ExtResource("13_ktnig")
 texture_hover = ExtResource("14_nfsas")
 
-[node name="RotationInputBox" type="LineEdit" parent="PlatformEditor2" unique_id=1418619044]
+[node name="RotationInputBox" type="LineEdit" parent="PlatformEditor" unique_id=1418619044]
 offset_left = 2.5
 offset_top = -14.166676
 offset_right = 95.0
@@ -115,7 +115,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xxw0v")
 theme_override_styles/focus = SubResource("StyleBoxFlat_5pcch")
 alignment = 1
 
-[node name="TimerInputBox" type="LineEdit" parent="PlatformEditor2" unique_id=617798088]
+[node name="TimerInputBox" type="LineEdit" parent="PlatformEditor" unique_id=617798088]
 offset_left = 2.499959
 offset_top = 20.833344
 offset_right = 94.99996
@@ -148,4 +148,5 @@ position = Vector2(1042, 583)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="PlatformEditor2/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="text_submitted" from="PlatformEditor/RotationInputBox" to="." method="_on_rotation_input_box_text_submitted"]
