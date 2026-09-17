@@ -9,6 +9,11 @@ var GridSize: float
 
 func _ready() -> void:
 	PlatformEditor.visible = true
+	
+	# Connecting signal from platforms
+	for child in get_children():
+		if child.has_signal("PlatformGrabbed"):
+			child.PlatformGrabbed.connect(_on_platform_grabbed)
 
 	var ScreenSize = get_viewport_rect().size
 	GridSize = ScreenSize.x / GridColumns
@@ -42,6 +47,10 @@ func _on_menu_button_pressed() -> void:
 func _on_restart_button_pressed() -> void:
 	# This is where the code to restart the level will go
 	print("Restart button pressed")
+
+
+func _on_platform_grabbed(PlatformName):
+	print("Platform grabbed: ", PlatformName)
 
 
 func _on_exit_button_pressed() -> void:
