@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp0gragflxy12"
-path="res://.godot/imported/simple wood texture.png-0afe6610dd7e14d37f539179777a2372.ctex"
+path="res://.godot/imported/simple wood texture.png-74e03d16b966322569f00e2376e682c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/simple wood texture.png"
-dest_files=["res://.godot/imported/simple wood texture.png-0afe6610dd7e14d37f539179777a2372.ctex"]
+source_file="res://Assets/images/simple wood texture.png"
+dest_files=["res://.godot/imported/simple wood texture.png-74e03d16b966322569f00e2376e682c9.ctex"]
 
 [params]
 
