@@ -1,3 +1,55 @@
 [gd_scene format=3 uid="uid://mi13rnnbe1l3"]
 
+[ext_resource type="Texture2D" uid="uid://bcwfy5entqxr5" path="res://Assets/Images/LevelUI/UIPlatformBackground.png" id="1_084pi"]
+[ext_resource type="Script" uid="uid://bdyc8mw7liplp" path="res://Assets/Scripts/LevelManager.gd" id="1_cp0jt"]
+[ext_resource type="Texture2D" uid="uid://baxaoiox5tg83" path="res://Assets/Images/LevelUI/MenuBarUI.png" id="2_43mlh"]
+[ext_resource type="Texture2D" uid="uid://cd1pd10qthi3h" path="res://Assets/Images/LevelUI/MenuButtonNormal.png" id="3_cp0jt"]
+[ext_resource type="Texture2D" uid="uid://vg664vl6hf5c" path="res://Assets/Images/LevelUI/MenuButtonPressed.png" id="4_p6pjf"]
+[ext_resource type="Texture2D" uid="uid://d2cpg0k1tgj3" path="res://Assets/Images/LevelUI/MenuButtonHover.png" id="5_m7vvj"]
+[ext_resource type="Texture2D" uid="uid://djvq4cjdps6j7" path="res://Assets/Images/LevelUI/Level3Heading.png" id="6_43mlh"]
+[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/BasicPlatform.tscn" id="6_kg31f"]
+
 [node name="Level3" type="Node2D" unique_id=1560589329]
+script = ExtResource("1_cp0jt")
+
+[node name="UI Platform Background" type="Sprite2D" parent="." unique_id=4375767]
+texture_filter = 1
+position = Vector2(576, 583)
+texture = ExtResource("1_084pi")
+
+[node name="UI Menu Bar Background" type="Sprite2D" parent="." unique_id=2081480515]
+texture_filter = 1
+position = Vector2(576, 16)
+texture = ExtResource("2_43mlh")
+
+[node name="MenuButton" type="TextureButton" parent="UI Menu Bar Background" unique_id=614143241]
+texture_filter = 1
+offset_left = -571.0
+offset_top = -11.0
+offset_right = -466.0
+offset_bottom = 11.0
+texture_normal = ExtResource("3_cp0jt")
+texture_pressed = ExtResource("4_p6pjf")
+texture_hover = ExtResource("5_m7vvj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Level3Heading" type="Sprite2D" parent="UI Menu Bar Background" unique_id=1278412714]
+position = Vector2(0, 3.5)
+texture = ExtResource("6_43mlh")
+
+[node name="Basic Platform 1" parent="." unique_id=983039995 instance=ExtResource("6_kg31f")]
+position = Vector2(105, 583.00006)
+
+[node name="Basic Platform 2" parent="." unique_id=2028494914 instance=ExtResource("6_kg31f")]
+position = Vector2(340, 583)
+
+[node name="Basic Platform 3" parent="." unique_id=886539787 instance=ExtResource("6_kg31f")]
+position = Vector2(577, 583)
+
+[node name="Basic Platform 4" parent="." unique_id=1863790798 instance=ExtResource("6_kg31f")]
+position = Vector2(812.9999, 583)
+
+[node name="Basic Platform 5" parent="." unique_id=605609480 instance=ExtResource("6_kg31f")]
+position = Vector2(1048, 583)
+
+[connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]

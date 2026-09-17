@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b20pmdcjjblvj"]
 
-[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/basic_platform.tscn" id="1_2llne"]
+[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/BasicPlatform.tscn" id="1_2llne"]
+[ext_resource type="Script" uid="uid://bdyc8mw7liplp" path="res://Assets/Scripts/LevelManager.gd" id="1_6ll4n"]
 [ext_resource type="Texture2D" uid="uid://bcwfy5entqxr5" path="res://Assets/Images/LevelUI/UIPlatformBackground.png" id="2_q12u6"]
 [ext_resource type="Texture2D" uid="uid://cd1pd10qthi3h" path="res://Assets/Images/LevelUI/MenuButtonNormal.png" id="3_jghel"]
 [ext_resource type="Texture2D" uid="uid://baxaoiox5tg83" path="res://Assets/Images/LevelUI/MenuBarUI.png" id="3_joc8x"]
@@ -8,17 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://d2cpg0k1tgj3" path="res://Assets/Images/LevelUI/MenuButtonHover.png" id="5_ysn8j"]
 [ext_resource type="Texture2D" uid="uid://p4w5cvbildyw" path="res://Assets/Images/LevelUI/Level1Heading.png" id="7_ysn8j"]
 
-[sub_resource type="GDScript" id="GDScript_jghel"]
-script/source = "extends Node2D
-
-
-func _on_menu_button_pressed() -> void:
-	# This is where the options menu / pause menu will go
-	print(\"Menu button pressed\")
-"
-
 [node name="Level1" type="Node2D" unique_id=1786507126]
-script = SubResource("GDScript_jghel")
+script = ExtResource("1_6ll4n")
 
 [node name="UI Platform Background" type="Sprite2D" parent="." unique_id=871874585]
 texture_filter = 1
@@ -42,7 +34,7 @@ texture_hover = ExtResource("5_ysn8j")
 
 [node name="Level 1 Heading" type="Sprite2D" parent="UI Menu Bar Background" unique_id=454606754]
 texture_filter = 1
-position = Vector2(0, 4)
+position = Vector2(0, 3.5)
 texture = ExtResource("7_ysn8j")
 
 [node name="Basic Platform 1" parent="." unique_id=1878829057 instance=ExtResource("1_2llne")]
