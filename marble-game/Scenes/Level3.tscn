@@ -13,10 +13,29 @@
 [ext_resource type="Texture2D" uid="uid://bufgew8kjc5f1" path="res://Assets/Images/LevelUI/RestartButtonHover.png" id="10_ffsx8"]
 [ext_resource type="Texture2D" uid="uid://dll1r5a0vdq5h" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditor.png" id="11_t5kwq"]
 [ext_resource type="Texture2D" uid="uid://be5jvciglygnw" path="res://Assets/Images/LevelUI/ExitButtonNormal.png" id="12_ms3ee"]
+[ext_resource type="Texture2D" uid="uid://c2as7h7jgeejg" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorSquare.png" id="12_xxw0v"]
+[ext_resource type="Texture2D" uid="uid://bdlmo7l7174cw" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorOneByThree.png" id="13_5pcch"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_ktnig"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_nfsas"]
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/OneByThreePlatform.tscn" id="16_ktnig"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/SquareBlock.tscn" id="17_nfsas"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_85b6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_t5kwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xxw0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5pcch")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level3" type="Node2D" unique_id=1560589329]
 script = ExtResource("1_cp0jt")
@@ -56,13 +75,13 @@ texture_normal = ExtResource("8_kg31f")
 texture_pressed = ExtResource("9_ncjpd")
 texture_hover = ExtResource("10_ffsx8")
 
-[node name="PlatformEditor" type="Sprite2D" parent="." unique_id=1472633141]
+[node name="PlatformEditor2" type="AnimatedSprite2D" parent="." unique_id=1166862166]
 texture_filter = 1
 position = Vector2(1007, 110)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("11_t5kwq")
+sprite_frames = SubResource("SpriteFrames_85b6l")
 
-[node name="ExitButton" type="TextureButton" parent="PlatformEditor" unique_id=980376071]
+[node name="ExitButton" type="TextureButton" parent="PlatformEditor2" unique_id=1744202020]
 texture_filter = 1
 offset_left = 84.16667
 offset_top = -47.499996
@@ -89,4 +108,4 @@ position = Vector2(1042, 583)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PlatformEditor2/ExitButton" to="." method="_on_exit_button_pressed"]
