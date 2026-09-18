@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/OneByThreePlatform.tscn" id="16_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/SquareBlock.tscn" id="16_ug0sv"]
+[ext_resource type="Texture2D" uid="uid://cauaks54ptwl6" path="res://Assets/Images/Platforms/MarbleDraft.png" id="20_yji5v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
 animations = [{
@@ -145,6 +146,13 @@ position = Vector2(812, 583)
 
 [node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("16_ug0sv")]
 position = Vector2(1042, 583)
+
+[node name="MarbleDraft" type="Sprite2D" parent="." unique_id=776869573]
+texture_filter = 1
+position = Vector2(341, 239)
+rotation = 0.6981317
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_yji5v")
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
