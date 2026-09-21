@@ -1,11 +1,11 @@
 extends Node2D
 
-@onready var PlatformEditor = $PlatformEditor
+@onready var PlatformEditor = $UI/PlatformEditor
 var SelectedPlatform = null
 
 # Rotation and timer labels
-@onready var RotationInputBox = $PlatformEditor/RotationInputBox
-@onready var TimerInputBox = $PlatformEditor/TimerInputBox
+@onready var RotationInputBox = $UI/PlatformEditor/RotationInputBox
+@onready var TimerInputBox = $UI/PlatformEditor/TimerInputBox
 
 # Setting grid size
 var GridColumns: int = 26
@@ -33,7 +33,7 @@ func _draw() -> void:
 	for x in range(GridColumns + 1):
 		var x_position = x * GridSize
 
-		draw_line(Vector2(x_position, 0), Vector2(x_position, ScreenSize.y), Color(0.337, 0.173, 0.0, 0.667), 1.0)
+		#draw_line(Vector2(x_position, 0), Vector2(x_position, ScreenSize.y), Color(0.337, 0.173, 0.0, 0.667), 1.0)
 
 	# Horizontal lines
 	var rows = int(ceil(ScreenSize.y / GridSize))
@@ -41,7 +41,7 @@ func _draw() -> void:
 	for y in range(rows + 1):
 		var y_position = y * GridSize
 
-		draw_line(Vector2(0, y_position), Vector2(ScreenSize.x, y_position), Color(0.337, 0.173, 0.0, 0.667), 1.0)
+		#draw_line(Vector2(0, y_position), Vector2(ScreenSize.x, y_position), Color(0.337, 0.173, 0.0, 0.667), 1.0)
 
 
 func _on_menu_button_pressed() -> void:

@@ -49,17 +49,20 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 [node name="Level1" type="Node2D" unique_id=1786507126]
 script = ExtResource("1_6ll4n")
 
-[node name="UI Platform Background" type="Sprite2D" parent="." unique_id=871874585]
+[node name="UI" type="CanvasLayer" parent="." unique_id=990282382]
+layer = -10
+
+[node name="Platform Selection" type="Sprite2D" parent="UI" unique_id=871874585]
 texture_filter = 1
 position = Vector2(576, 583)
 texture = ExtResource("2_q12u6")
 
-[node name="UI Menu Bar Background" type="Sprite2D" parent="." unique_id=1130546786]
+[node name="Menu Bar" type="Sprite2D" parent="UI" unique_id=1130546786]
 texture_filter = 1
 position = Vector2(576, 16)
 texture = ExtResource("3_joc8x")
 
-[node name="MenuButton" type="TextureButton" parent="UI Menu Bar Background" unique_id=85376535]
+[node name="MenuButton" type="TextureButton" parent="UI/Menu Bar" unique_id=85376535]
 texture_filter = 1
 offset_left = -571.0
 offset_top = -11.0
@@ -69,12 +72,12 @@ texture_normal = ExtResource("3_jghel")
 texture_pressed = ExtResource("4_t3or0")
 texture_hover = ExtResource("5_ysn8j")
 
-[node name="Level 1 Heading" type="Sprite2D" parent="UI Menu Bar Background" unique_id=454606754]
+[node name="Level 1 Heading" type="Sprite2D" parent="UI/Menu Bar" unique_id=454606754]
 texture_filter = 1
 position = Vector2(0, 3.5)
 texture = ExtResource("7_ysn8j")
 
-[node name="RestartButton" type="TextureButton" parent="UI Menu Bar Background" unique_id=247125647]
+[node name="RestartButton" type="TextureButton" parent="UI/Menu Bar" unique_id=247125647]
 texture_filter = 1
 offset_left = 466.0
 offset_top = -11.0
@@ -84,13 +87,13 @@ texture_normal = ExtResource("8_2h8qs")
 texture_pressed = ExtResource("9_rpty4")
 texture_hover = ExtResource("10_6jj8j")
 
-[node name="PlatformEditor" type="AnimatedSprite2D" parent="." unique_id=1126110865]
+[node name="PlatformEditor" type="AnimatedSprite2D" parent="UI" unique_id=1126110865]
 texture_filter = 1
 position = Vector2(1007, 110)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_ug0sv")
 
-[node name="ExitButton" type="TextureButton" parent="PlatformEditor" unique_id=1892082446]
+[node name="ExitButton" type="TextureButton" parent="UI/PlatformEditor" unique_id=1892082446]
 texture_filter = 1
 offset_left = 84.16667
 offset_top = -47.499996
@@ -100,7 +103,7 @@ texture_normal = ExtResource("12_ubfni")
 texture_pressed = ExtResource("13_ug0sv")
 texture_hover = ExtResource("14_0wsr5")
 
-[node name="RotationInputBox" type="LineEdit" parent="PlatformEditor" unique_id=526378301]
+[node name="RotationInputBox" type="LineEdit" parent="UI/PlatformEditor" unique_id=526378301]
 offset_left = 2.5
 offset_top = -14.166676
 offset_right = 95.0
@@ -116,7 +119,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_q1ws5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
 alignment = 1
 
-[node name="TimerInputBox" type="LineEdit" parent="PlatformEditor" unique_id=1278082735]
+[node name="TimerInputBox" type="LineEdit" parent="UI/PlatformEditor" unique_id=1278082735]
 offset_left = 2.499959
 offset_top = 20.833344
 offset_right = 94.99996
@@ -131,6 +134,13 @@ theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_q1ws5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
 alignment = 1
+
+[node name="MarbleDraft" type="Sprite2D" parent="." unique_id=776869573]
+texture_filter = 1
+position = Vector2(341, 239)
+rotation = 0.6981317
+scale = Vector2(0.24999999, 0.24999999)
+texture = ExtResource("20_yji5v")
 
 [node name="Basic Platform" parent="." unique_id=983039995 instance=ExtResource("1_2llne")]
 position = Vector2(105, 583.00006)
@@ -147,14 +157,7 @@ position = Vector2(812, 583)
 [node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("16_ug0sv")]
 position = Vector2(1042, 583)
 
-[node name="MarbleDraft" type="Sprite2D" parent="." unique_id=776869573]
-texture_filter = 1
-position = Vector2(341, 239)
-rotation = 0.6981317
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("20_yji5v")
-
-[connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="text_submitted" from="PlatformEditor/RotationInputBox" to="." method="_on_rotation_input_box_text_submitted"]
+[connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="UI/PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="text_submitted" from="UI/PlatformEditor/RotationInputBox" to="." method="_on_rotation_input_box_text_submitted"]
