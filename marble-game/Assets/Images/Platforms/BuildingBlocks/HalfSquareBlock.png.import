@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh5i4uu2akvff"
-path="res://.godot/imported/WoodTriangle.png-fa548222ac513a60664d7eb96f14409c.ctex"
+uid="uid://cuf4u7e5wx4km"
+path="res://.godot/imported/HalfSquareBlock.png-9ca72bb982d13641e7a4964207c611e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Platforms/WoodTriangle.png"
-dest_files=["res://.godot/imported/WoodTriangle.png-fa548222ac513a60664d7eb96f14409c.ctex"]
+source_file="res://Assets/Images/Platforms/BuildingBlocks/HalfSquareBlock.png"
+dest_files=["res://.godot/imported/HalfSquareBlock.png-9ca72bb982d13641e7a4964207c611e6.ctex"]
 
 [params]
 
