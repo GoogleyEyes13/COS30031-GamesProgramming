@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/BasicPlatform.tscn" id="1_2llne"]
 [ext_resource type="Script" uid="uid://bdyc8mw7liplp" path="res://Assets/Scripts/LevelManager.gd" id="1_6ll4n"]
 [ext_resource type="Texture2D" uid="uid://bcwfy5entqxr5" path="res://Assets/Images/LevelUI/UIPlatformBackground.png" id="2_q12u6"]
+[ext_resource type="Texture2D" uid="uid://cbs2gh4c3fe3w" path="res://Assets/Images/Platforms/Level1Course.png" id="2_ulvkb"]
 [ext_resource type="Texture2D" uid="uid://cd1pd10qthi3h" path="res://Assets/Images/LevelUI/MenuButtonNormal.png" id="3_jghel"]
 [ext_resource type="Texture2D" uid="uid://baxaoiox5tg83" path="res://Assets/Images/LevelUI/MenuBarUI.png" id="3_joc8x"]
 [ext_resource type="Texture2D" uid="uid://vg664vl6hf5c" path="res://Assets/Images/LevelUI/MenuButtonPressed.png" id="4_t3or0"]
@@ -50,7 +51,23 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 script = ExtResource("1_6ll4n")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=990282382]
-layer = -10
+layer = -1
+
+[node name="Level1Course" type="CharacterBody2D" parent="UI" unique_id=485372311]
+texture_filter = 1
+position = Vector2(576, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Level1Course" unique_id=855761127]
+texture = ExtResource("2_ulvkb")
+
+[node name="PlatformLeft" type="CollisionPolygon2D" parent="UI/Level1Course" unique_id=954305442]
+polygon = PackedVector2Array(-576, -230, -432, -159, -432, -109, -478, -86, -576, -86, -576, -230)
+
+[node name="PlatformMiddle" type="CollisionPolygon2D" parent="UI/Level1Course" unique_id=690931640]
+polygon = PackedVector2Array(-183, -64, 59, -64, 105, -41, 105, -16, -183, -16)
+
+[node name="PlatformRight" type="CollisionPolygon2D" parent="UI/Level1Course" unique_id=1829193691]
+polygon = PackedVector2Array(336, 95, 576, 95, 576, 324, 336, 324)
 
 [node name="Platform Selection" type="Sprite2D" parent="UI" unique_id=871874585]
 texture_filter = 1
@@ -135,9 +152,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_q1ws5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
 alignment = 1
 
-[node name="MarbleDraft" type="Sprite2D" parent="." unique_id=776869573]
+[node name="Marble" type="Sprite2D" parent="." unique_id=776869573]
 texture_filter = 1
-position = Vector2(68, 60.00006)
+position = Vector2(31.000004, 61)
 rotation = 0.6981317
 scale = Vector2(0.24999999, 0.24999999)
 texture = ExtResource("20_yji5v")
