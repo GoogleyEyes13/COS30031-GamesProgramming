@@ -171,17 +171,18 @@ position = Vector2(812, 583)
 position = Vector2(1042, 583)
 
 [node name="MarbleObject" type="Node2D" parent="." unique_id=968156176]
+position = Vector2(35, 57)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="MarbleObject" unique_id=471347141]
 
 [node name="Marble" type="Sprite2D" parent="MarbleObject/RigidBody2D" unique_id=776869573]
 texture_filter = 1
-position = Vector2(31.000004, 61)
 rotation = 0.6981317
 scale = Vector2(0.24999997, 0.24999997)
 texture = ExtResource("20_yji5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MarbleObject/RigidBody2D" unique_id=1167788588]
+scale = Vector2(2.39, 2.39)
 shape = SubResource("CircleShape2D_dwfm5")
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
