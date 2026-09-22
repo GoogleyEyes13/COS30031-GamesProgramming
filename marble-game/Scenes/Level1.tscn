@@ -131,7 +131,7 @@ theme_override_colors/font_outline_color = Color(0.65882355, 0.5882353, 0.482352
 theme_override_colors/font_placeholder_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
 theme_override_colors/caret_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
 theme_override_colors/selection_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_q1ws5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
 alignment = 1
@@ -147,9 +147,10 @@ theme_override_colors/font_outline_color = Color(0.65882355, 0.5882353, 0.482352
 theme_override_colors/font_placeholder_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
 theme_override_colors/caret_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
 theme_override_colors/selection_color = Color(0.65882355, 0.5882353, 0.48235294, 1)
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_q1ws5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
+text = "5.0"
 alignment = 1
 
 [node name="Marble" type="Sprite2D" parent="." unique_id=776869573]
@@ -178,3 +179,4 @@ position = Vector2(1042, 583)
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="UI/PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="text_submitted" from="UI/PlatformEditor/RotationInputBox" to="." method="_on_rotation_input_box_text_submitted"]
+[connection signal="text_submitted" from="UI/PlatformEditor/TimerInputBox" to="." method="_on_timer_input_box_text_submitted"]
