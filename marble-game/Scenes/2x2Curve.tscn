@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://s8a4dv82ubvt"]
+
+[ext_resource type="Texture2D" uid="uid://dj4eknnq4gf4u" path="res://Assets/Images/Platforms/2x2Curve.png" id="1_chact"]
+
+[node name="2x2Curve" type="StaticBody2D" unique_id=1108970176]
+
+[node name="2x2Curve" type="Sprite2D" parent="." unique_id=38800417]
+texture = ExtResource("1_chact")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=677132474]
+polygon = PackedVector2Array(-48, -48, -34, -48, -32, -26, -23, -5, -11, 11, 6, 24, 22, 31, 48, 35, 48, 48, -48, 48)

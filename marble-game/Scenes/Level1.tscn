@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://bdlmo7l7174cw" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorOneByThree.png" id="13_q1ws5"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_ug0sv"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_0wsr5"]
-[ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/OneByThreePlatform.tscn" id="16_0wsr5"]
-[ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/SquareBlock.tscn" id="16_ug0sv"]
+[ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/1x3Block.tscn" id="16_0wsr5"]
+[ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/2x2Block.tscn" id="16_ug0sv"]
 [ext_resource type="Texture2D" uid="uid://cauaks54ptwl6" path="res://Assets/Images/Platforms/MarbleDraft.png" id="20_yji5v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]

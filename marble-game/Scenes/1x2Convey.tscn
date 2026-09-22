@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dfw70myqgeal4"]
+
+[ext_resource type="Texture2D" uid="uid://dldwe8wigm8jj" path="res://Assets/Images/Platforms/BuildingBlocks/SquareBlock.png" id="1_wneuc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrbih"]
+size = Vector2(96, 48)
+
+[node name="1x2Convey" type="StaticBody2D" unique_id=444882055]
+
+[node name="SquareBlock" type="Sprite2D" parent="." unique_id=1905253175]
+position = Vector2(-24, 0)
+texture = ExtResource("1_wneuc")
+
+[node name="SquareBlock2" type="Sprite2D" parent="." unique_id=1218787435]
+position = Vector2(24, 0)
+texture = ExtResource("1_wneuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737425017]
+shape = SubResource("RectangleShape2D_yrbih")

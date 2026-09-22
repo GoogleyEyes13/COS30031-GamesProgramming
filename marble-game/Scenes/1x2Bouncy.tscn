@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://rowvxktipx5x"]
+
+[ext_resource type="Texture2D" uid="uid://bsy4dvqkpjy3m" path="res://Assets/Images/Platforms/BuildingBlocks/1x2Bouncy.png" id="1_aohjf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrbih"]
+size = Vector2(96, 48)
+
+[node name="1x2Bouncy" type="StaticBody2D" unique_id=444882055]
+
+[node name="SquareBlock" type="Sprite2D" parent="." unique_id=1905253175]
+texture = ExtResource("1_aohjf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737425017]
+shape = SubResource("RectangleShape2D_yrbih")
