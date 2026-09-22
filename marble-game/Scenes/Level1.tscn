@@ -47,6 +47,8 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwfm5"]
+
 [node name="Level1" type="Node2D" unique_id=1786507126]
 script = ExtResource("1_6ll4n")
 
@@ -153,13 +155,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
 text = "5.0"
 alignment = 1
 
-[node name="Marble" type="Sprite2D" parent="." unique_id=776869573]
-texture_filter = 1
-position = Vector2(31.000004, 61)
-rotation = 0.6981317
-scale = Vector2(0.24999999, 0.24999999)
-texture = ExtResource("20_yji5v")
-
 [node name="Basic Platform" parent="." unique_id=983039995 instance=ExtResource("1_2llne")]
 position = Vector2(105, 583.00006)
 
@@ -174,6 +169,20 @@ position = Vector2(812, 583)
 
 [node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("16_ug0sv")]
 position = Vector2(1042, 583)
+
+[node name="MarbleObject" type="Node2D" parent="." unique_id=968156176]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="MarbleObject" unique_id=471347141]
+
+[node name="Marble" type="Sprite2D" parent="MarbleObject/RigidBody2D" unique_id=776869573]
+texture_filter = 1
+position = Vector2(31.000004, 61)
+rotation = 0.6981317
+scale = Vector2(0.24999997, 0.24999997)
+texture = ExtResource("20_yji5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarbleObject/RigidBody2D" unique_id=1167788588]
+shape = SubResource("CircleShape2D_dwfm5")
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]
