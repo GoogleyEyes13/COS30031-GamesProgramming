@@ -11,6 +11,9 @@ var SelectedPlatform = null
 var GridColumns: int = 26
 var GridSize: float
 
+# Setting default Platform Time
+@onready var PlatformTimer: float = 5.0
+
 
 func _ready() -> void:
 	PlatformEditor.visible = false
@@ -90,6 +93,15 @@ func _on_rotation_input_box_text_submitted(new_text: String) -> void:
 	var Rotation = float(new_text)
 	SelectedPlatform.rotate_platform(Rotation)
 	
-	# Update input labels
+	# Update input label
 	RotationInputBox.text = str(int(fmod(SelectedPlatform.rotation_degrees, 360.0)))
+
+
+func _on_timer_input_box_text_submitted(new_text: String) -> void:
+	if SelectedPlatform == null:
+		return
 	
+	var PlatformTimer = float(new_text)
+
+	# Update input label
+	TimerInputBox.text = str(PlatformTimer)
