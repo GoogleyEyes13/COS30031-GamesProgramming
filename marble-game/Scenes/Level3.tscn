@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://vg664vl6hf5c" path="res://Assets/Images/LevelUI/MenuButtonPressed.png" id="4_p6pjf"]
 [ext_resource type="Texture2D" uid="uid://d2cpg0k1tgj3" path="res://Assets/Images/LevelUI/MenuButtonHover.png" id="5_m7vvj"]
 [ext_resource type="Texture2D" uid="uid://djvq4cjdps6j7" path="res://Assets/Images/LevelUI/Level3Heading.png" id="6_43mlh"]
-[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/Objects/BasicPlatform.tscn" id="6_kg31f"]
 [ext_resource type="Texture2D" uid="uid://ddjbsqcqin4tx" path="res://Assets/Images/LevelUI/RestartButtonNormal.png" id="8_kg31f"]
 [ext_resource type="Texture2D" uid="uid://cw21wee136h5v" path="res://Assets/Images/LevelUI/RestartButtonPressed.png" id="9_ncjpd"]
 [ext_resource type="Texture2D" uid="uid://bufgew8kjc5f1" path="res://Assets/Images/LevelUI/RestartButtonHover.png" id="10_ffsx8"]
@@ -141,15 +140,6 @@ theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_xxw0v")
 theme_override_styles/focus = SubResource("StyleBoxFlat_5pcch")
 alignment = 1
-
-[node name="Basic Platform 1" parent="." unique_id=983039995 instance=ExtResource("6_kg31f")]
-position = Vector2(105, 583.00006)
-
-[node name="Basic Platform 2" parent="." unique_id=2028494914 instance=ExtResource("6_kg31f")]
-position = Vector2(340, 583)
-
-[node name="Basic Platform 3" parent="." unique_id=886539787 instance=ExtResource("6_kg31f")]
-position = Vector2(577, 583)
 
 [node name="OneByThreePlatform" parent="." unique_id=970050617 instance=ExtResource("16_ktnig")]
 position = Vector2(812, 583)
