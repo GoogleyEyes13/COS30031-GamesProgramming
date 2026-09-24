@@ -7,10 +7,6 @@ var SelectedPlatform = null
 @onready var RotationInputBox = $UI/PlatformEditor/RotationInputBox
 @onready var TimerInputBox = $UI/PlatformEditor/TimerInputBox
 
-# Setting grid size
-var GridColumns: int = 26
-var GridSize: float
-
 # Setting default Platform Time
 @onready var PlatformTimer: float = 5.0
 
@@ -24,27 +20,6 @@ func _ready() -> void:
 			child.PlatformGrabbed.connect(_on_platform_grabbed)
 
 	var ScreenSize = get_viewport_rect().size
-	GridSize = ScreenSize.x / GridColumns
-
-	queue_redraw()
-
-
-func _draw() -> void:
-	var ScreenSize = get_viewport_rect().size
-
-	# Vertical lines
-	for x in range(GridColumns + 1):
-		var x_position = x * GridSize
-
-		#draw_line(Vector2(x_position, 0), Vector2(x_position, ScreenSize.y), Color(0.337, 0.173, 0.0, 0.667), 1.0)
-
-	# Horizontal lines
-	var rows = int(ceil(ScreenSize.y / GridSize))
-
-	for y in range(rows + 1):
-		var y_position = y * GridSize
-
-		#draw_line(Vector2(0, y_position), Vector2(ScreenSize.x, y_position), Color(0.337, 0.173, 0.0, 0.667), 1.0)
 
 
 func _on_menu_button_pressed() -> void:
