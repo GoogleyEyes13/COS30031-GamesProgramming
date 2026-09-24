@@ -163,19 +163,21 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_yji5v")
 text = "5.0"
 alignment = 1
 
-[node name="Basic Platform" parent="." unique_id=983039995 instance=ExtResource("1_2llne")]
+[node name="PlatformSelections" type="CanvasLayer" parent="." unique_id=818705883]
+
+[node name="Basic Platform" parent="PlatformSelections" unique_id=983039995 instance=ExtResource("1_2llne")]
 position = Vector2(105, 583.00006)
 
-[node name="Basic Platform2" parent="." unique_id=995872866 instance=ExtResource("1_2llne")]
+[node name="Basic Platform2" parent="PlatformSelections" unique_id=995872866 instance=ExtResource("1_2llne")]
 position = Vector2(339, 583)
 
-[node name="Basic Platform3" parent="." unique_id=1165172434 instance=ExtResource("1_2llne")]
+[node name="Basic Platform3" parent="PlatformSelections" unique_id=1165172434 instance=ExtResource("1_2llne")]
 position = Vector2(577, 583.00006)
 
-[node name="OneByThreePlatform" parent="." unique_id=970050617 instance=ExtResource("16_0wsr5")]
+[node name="OneByThreePlatform" parent="PlatformSelections" unique_id=970050617 instance=ExtResource("16_0wsr5")]
 position = Vector2(812, 583)
 
-[node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("16_ug0sv")]
+[node name="SquarePlatform" parent="PlatformSelections" unique_id=502299360 instance=ExtResource("16_ug0sv")]
 position = Vector2(1042, 583)
 
 [node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]

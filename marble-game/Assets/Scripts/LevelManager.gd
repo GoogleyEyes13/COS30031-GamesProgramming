@@ -2,6 +2,11 @@ extends Node2D
 
 @onready var PlatformEditor = $UI/PlatformEditor
 var SelectedPlatform = null
+var MovedPlatforms: Array = []
+
+# Platform selections
+@onready var PlatformSelection = $"UI/Platform Selection"
+@onready var Platforms = $PlatformSelections
 
 # Rotation and timer labels
 @onready var RotationInputBox = $UI/PlatformEditor/RotationInputBox
@@ -18,16 +23,31 @@ func _ready() -> void:
 	PlatformEditor.visible = false
 	
 	# Connecting signal from platforms
-	for child in get_children():
-		if child.has_signal("PlatformGrabbed"):
-			child.PlatformGrabbed.connect(_on_platform_grabbed)
-
+	for platform in Platforms.get_children():
+		if platform.has_signal("PlatformGrabbed"):
+			platform.PlatformGrabbed.connect(_on_platform_grabbed)
+	
 	var ScreenSize = get_viewport_rect().size
 
 
 func _input(event) -> void:
 	if event.is_action_pressed("Space"):
 		LevelStarted = true
+		
+		# Removing the platform selection
+		PlatformSelection.visible = false
+		PlatformEditor.visible = false
+		
+		# Hide and disable platforms that haven't been moved
+		for platform in Platforms.get_children():
+			if platform not in MovedPlatforms:
+				platform.visible = false
+				
+				var collision = platform.get_node_or_null("CollisionShape2D")
+				if collision:
+					collision.disabled = true
+		
+		# Emitting level start signal to drop the marble
 		StartLevel.emit()
 	
 	if event.is_action_pressed("Menu"):
@@ -51,6 +71,10 @@ func _on_platform_grabbed(Platform):
 	print("Platform grabbed: ", Platform.name)
 	
 	SelectedPlatform = Platform
+	
+	# Keeping track of platforms that have been grabbed
+	if Platform not in MovedPlatforms:
+		MovedPlatforms.append(Platform)
 	
 	match Platform.name:
 		"Basic Platform":
@@ -91,7 +115,7 @@ func _on_timer_input_box_text_submitted(new_text: String) -> void:
 	if SelectedPlatform == null:
 		return
 	
-	var PlatformTimer = float(new_text)
+	PlatformTimer = float(new_text)
 
 	# Update input label
 	TimerInputBox.text = str(PlatformTimer)
