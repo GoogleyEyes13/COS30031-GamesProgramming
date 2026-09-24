@@ -9,6 +9,8 @@
 script = ExtResource("1_4ln81")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=830943883]
+mass = 0.5
+gravity_scale = 1.4
 
 [node name="Marble" type="Sprite2D" parent="RigidBody2D" unique_id=585041648]
 texture_filter = 1
