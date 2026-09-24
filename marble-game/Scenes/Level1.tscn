@@ -64,7 +64,7 @@ texture = ExtResource("2_ulvkb")
 polygon = PackedVector2Array(-576, -230, -432, -159, -432, -109, -478, -86, -576, -86, -576, -230)
 
 [node name="PlatformMiddle" type="CollisionPolygon2D" parent="UI/Level1Course" unique_id=690931640]
-polygon = PackedVector2Array(-183, -64, 59, -64, 105, -41, 105, -16, -183, -16)
+polygon = PackedVector2Array(-174, -68, 68, -68, 162, -20, -174, -20)
 
 [node name="PlatformRight" type="CollisionPolygon2D" parent="UI/Level1Course" unique_id=1829193691]
 polygon = PackedVector2Array(336, 95, 576, 95, 576, 324, 336, 324)
