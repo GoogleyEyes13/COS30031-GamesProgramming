@@ -89,7 +89,7 @@ func _on_platform_grabbed(Platform):
 			PlatformEditor.frame = 2
 	
 	# Update the rotation text box to match the selected platform
-	RotationInputBox.text = str(int(fmod(Platform.rotation_degrees, 360.0)))
+	RotationInputBox.text = str(int(round(fmod(Platform.rotation_degrees, 360.0))))
 	
 	PlatformEditor.visible = true
 
@@ -108,7 +108,7 @@ func _on_rotation_input_box_text_submitted(new_text: String) -> void:
 	SelectedPlatform.rotate_platform(Rotation)
 	
 	# Update input label
-	RotationInputBox.text = str(int(fmod(SelectedPlatform.rotation_degrees, 360.0)))
+	RotationInputBox.text = str(int(round(SelectedPlatform.rotation_degrees)))
 
 
 func _on_timer_input_box_text_submitted(new_text: String) -> void:

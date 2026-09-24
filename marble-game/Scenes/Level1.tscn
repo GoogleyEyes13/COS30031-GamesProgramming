@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b20pmdcjjblvj"]
 
-[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/Objects/BasicPlatform.tscn" id="1_2llne"]
 [ext_resource type="Script" uid="uid://bdyc8mw7liplp" path="res://Assets/Scripts/LevelManager.gd" id="1_6ll4n"]
 [ext_resource type="Texture2D" uid="uid://bcwfy5entqxr5" path="res://Assets/Images/LevelUI/UIPlatformBackground.png" id="2_q12u6"]
 [ext_resource type="Texture2D" uid="uid://cbs2gh4c3fe3w" path="res://Assets/Images/Platforms/Level1Course.png" id="2_ulvkb"]
@@ -20,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/Objects/1x3Block.tscn" id="16_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="16_ug0sv"]
+[ext_resource type="PackedScene" uid="uid://s8a4dv82ubvt" path="res://Scenes/Objects/2x2Curve.tscn" id="20_ulvkb"]
 [ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="21_ulvkb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
@@ -165,20 +165,14 @@ alignment = 1
 
 [node name="PlatformSelections" type="CanvasLayer" parent="." unique_id=818705883]
 
-[node name="Basic Platform" parent="PlatformSelections" unique_id=983039995 instance=ExtResource("1_2llne")]
-position = Vector2(105, 583.00006)
-
-[node name="Basic Platform2" parent="PlatformSelections" unique_id=995872866 instance=ExtResource("1_2llne")]
-position = Vector2(339, 583)
-
-[node name="Basic Platform3" parent="PlatformSelections" unique_id=1165172434 instance=ExtResource("1_2llne")]
-position = Vector2(577, 583.00006)
-
 [node name="OneByThreePlatform" parent="PlatformSelections" unique_id=970050617 instance=ExtResource("16_0wsr5")]
 position = Vector2(812, 583)
 
 [node name="SquarePlatform" parent="PlatformSelections" unique_id=502299360 instance=ExtResource("16_ug0sv")]
 position = Vector2(1042, 583)
+
+[node name="2x2Curve" parent="PlatformSelections" unique_id=1108970176 instance=ExtResource("20_ulvkb")]
+position = Vector2(578, 582)
 
 [node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]
 position = Vector2(35, 57)
