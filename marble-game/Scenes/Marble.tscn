@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cjdgiss2fml2h"]
+
+[ext_resource type="Texture2D" uid="uid://bd6yrsyeyqj0t" path="res://Assets/Images/Marble.png" id="1_2v8fe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ln81"]
+
+[node name="Marble" type="Node2D" unique_id=1397272568]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=830943883]
+
+[node name="Marble" type="Sprite2D" parent="RigidBody2D" unique_id=585041648]
+texture_filter = 1
+rotation = 0.6981317
+texture = ExtResource("1_2v8fe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=12159089]
+scale = Vector2(2.39, 2.39)
+shape = SubResource("CircleShape2D_4ln81")

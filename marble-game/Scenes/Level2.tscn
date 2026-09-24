@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://vg664vl6hf5c" path="res://Assets/Images/LevelUI/MenuButtonPressed.png" id="4_au75x"]
 [ext_resource type="Texture2D" uid="uid://d2cpg0k1tgj3" path="res://Assets/Images/LevelUI/MenuButtonHover.png" id="5_62f1r"]
 [ext_resource type="Texture2D" uid="uid://1r1l0whv1rxb" path="res://Assets/Images/LevelUI/Level2Heading.png" id="7_ycmr1"]
-[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/BasicPlatform.tscn" id="8_2jwna"]
+[ext_resource type="PackedScene" uid="uid://b76w6ymskwvkg" path="res://Scenes/Objects/BasicPlatform.tscn" id="8_2jwna"]
 [ext_resource type="Texture2D" uid="uid://ddjbsqcqin4tx" path="res://Assets/Images/LevelUI/RestartButtonNormal.png" id="8_au75x"]
 [ext_resource type="Texture2D" uid="uid://cw21wee136h5v" path="res://Assets/Images/LevelUI/RestartButtonPressed.png" id="9_62f1r"]
 [ext_resource type="Texture2D" uid="uid://bufgew8kjc5f1" path="res://Assets/Images/LevelUI/RestartButtonHover.png" id="10_1je60"]
@@ -17,8 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://bdlmo7l7174cw" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorOneByThree.png" id="13_bgqvi"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_xx40l"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_utdxf"]
-[ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/1x3Block.tscn" id="16_xx40l"]
-[ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/2x2Block.tscn" id="17_utdxf"]
+[ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/Objects/1x3Block.tscn" id="16_xx40l"]
+[ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="17_utdxf"]
+[ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="20_bgqvi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6cjmx"]
 animations = [{
@@ -146,6 +147,9 @@ position = Vector2(812, 583)
 
 [node name="SquarePlatform" parent="." unique_id=502299360 instance=ExtResource("17_utdxf")]
 position = Vector2(1042, 583)
+
+[node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("20_bgqvi")]
+position = Vector2(35, 57)
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
