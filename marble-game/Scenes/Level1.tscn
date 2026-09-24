@@ -89,6 +89,16 @@ texture_normal = ExtResource("3_jghel")
 texture_pressed = ExtResource("4_t3or0")
 texture_hover = ExtResource("5_ysn8j")
 
+[node name="SpaceLabel" type="Label" parent="UI/Menu Bar" unique_id=1998546314]
+offset_left = -465.0
+offset_top = -14.0
+offset_right = -78.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0.90076125, 0.84438336, 0.7581101, 1)
+theme_override_font_sizes/font_size = 18
+text = "Press Space to start level"
+horizontal_alignment = 1
+
 [node name="Level 1 Heading" type="Sprite2D" parent="UI/Menu Bar" unique_id=454606754]
 texture_filter = 1
 position = Vector2(0, 3.5)

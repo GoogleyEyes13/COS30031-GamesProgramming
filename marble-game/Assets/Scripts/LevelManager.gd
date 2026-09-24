@@ -10,6 +10,9 @@ var SelectedPlatform = null
 # Setting default Platform Time
 @onready var PlatformTimer: float = 5.0
 
+@onready var LevelStarted = false
+signal StartLevel
+
 
 func _ready() -> void:
 	PlatformEditor.visible = false
@@ -21,6 +24,11 @@ func _ready() -> void:
 
 	var ScreenSize = get_viewport_rect().size
 
+
+func _input(event) -> void:
+	if event.is_action_pressed("Space"):
+		LevelStarted = true
+		StartLevel.emit()
 
 func _on_menu_button_pressed() -> void:
 	# This is where the options menu / pause menu will go
