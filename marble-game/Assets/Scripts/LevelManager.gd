@@ -29,6 +29,10 @@ func _input(event) -> void:
 	if event.is_action_pressed("Space"):
 		LevelStarted = true
 		StartLevel.emit()
+	
+	if event.is_action_pressed("Restart"):
+		_on_restart_button_pressed()
+
 
 func _on_menu_button_pressed() -> void:
 	# This is where the options menu / pause menu will go
@@ -37,7 +41,7 @@ func _on_menu_button_pressed() -> void:
 
 func _on_restart_button_pressed() -> void:
 	# This is where the code to restart the level will go
-	print("Restart button pressed")
+	get_tree().reload_current_scene()
 
 
 func _on_platform_grabbed(Platform):
