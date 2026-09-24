@@ -30,17 +30,20 @@ func _input(event) -> void:
 		LevelStarted = true
 		StartLevel.emit()
 	
+	if event.is_action_pressed("Menu"):
+		_on_menu_button_pressed()
+	
 	if event.is_action_pressed("Restart"):
 		_on_restart_button_pressed()
 
 
 func _on_menu_button_pressed() -> void:
-	# This is where the options menu / pause menu will go
-	print("Menu button pressed")
+	# Change scene to menu scene
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 
 
 func _on_restart_button_pressed() -> void:
-	# This is where the code to restart the level will go
+	# Restart the level
 	get_tree().reload_current_scene()
 
 
