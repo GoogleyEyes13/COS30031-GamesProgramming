@@ -21,6 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="16_ug0sv"]
 [ext_resource type="PackedScene" uid="uid://s8a4dv82ubvt" path="res://Scenes/Objects/2x2Curve.tscn" id="20_ulvkb"]
 [ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="21_ulvkb"]
+[ext_resource type="PackedScene" uid="uid://dr4rbjnqoqddh" path="res://Scenes/Objects/Pickup.tscn" id="22_fh0sh"]
+[ext_resource type="Texture2D" uid="uid://bsscroutj2o8n" path="res://Assets/Images/Pickups/PickupGreen.png" id="23_03od6"]
+[ext_resource type="Texture2D" uid="uid://ccstjkyo5yit" path="res://Assets/Images/Pickups/PickupBeige.png" id="24_384de"]
+[ext_resource type="Texture2D" uid="uid://ccxvjk8kui6n4" path="res://Assets/Images/Pickups/PickupOrange.png" id="25_bhaf5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
 animations = [{
@@ -176,6 +180,18 @@ position = Vector2(578, 582)
 
 [node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]
 position = Vector2(35, 57)
+
+[node name="Green" parent="." unique_id=1838910236 instance=ExtResource("22_fh0sh")]
+position = Vector2(427.00003, 234)
+texture = ExtResource("23_03od6")
+
+[node name="Beige" parent="." unique_id=1406982968 instance=ExtResource("22_fh0sh")]
+position = Vector2(523, 234)
+texture = ExtResource("24_384de")
+
+[node name="Orange" parent="." unique_id=1381004944 instance=ExtResource("22_fh0sh")]
+position = Vector2(617.00006, 234)
+texture = ExtResource("25_bhaf5")
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]
