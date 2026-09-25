@@ -15,6 +15,9 @@ var MovedPlatforms: Array = []
 # Setting default Platform Time
 @onready var PlatformTimer: float = 5.0
 
+# Sound effects
+@onready var ButtonClick = $ButtonClick
+
 @onready var LevelStarted = false
 signal StartLevel
 
@@ -61,11 +64,17 @@ func _input(event) -> void:
 
 
 func _on_menu_button_pressed() -> void:
+	ButtonClick.play()
+	await get_tree().create_timer(0.3).timeout
+	
 	# Change scene to menu scene
 	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 
 
 func _on_restart_button_pressed() -> void:
+	ButtonClick.play()
+	await get_tree().create_timer(0.3).timeout
+	
 	# Restart the level
 	get_tree().reload_current_scene()
 
@@ -98,6 +107,7 @@ func _on_platform_grabbed(Platform):
 
 
 func _on_exit_button_pressed() -> void:
+	ButtonClick.play()
 	# Closing the Platform editor
 	PlatformEditor.visible = false
 	print("Platform editor exited")

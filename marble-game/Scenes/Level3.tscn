@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/Objects/1x3Block.tscn" id="16_ktnig"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="17_nfsas"]
 [ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="20_5pcch"]
+[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/universfield-interface-click-124476.mp3" id="20_85b6l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_85b6l"]
 animations = [{
@@ -149,6 +150,9 @@ position = Vector2(1042, 583)
 
 [node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("20_5pcch")]
 position = Vector2(35, 57)
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="." unique_id=244738568]
+stream = ExtResource("20_85b6l")
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
