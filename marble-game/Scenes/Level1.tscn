@@ -189,6 +189,7 @@ position = Vector2(1042, 583)
 position = Vector2(578, 582)
 
 [node name="Pickups" type="CanvasLayer" parent="." unique_id=542252654]
+layer = -1
 
 [node name="Green" parent="Pickups" unique_id=1838910236 instance=ExtResource("22_fh0sh")]
 position = Vector2(427.00003, 234)
