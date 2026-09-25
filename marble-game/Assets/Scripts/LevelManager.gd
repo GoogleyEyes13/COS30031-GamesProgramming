@@ -98,14 +98,12 @@ func _on_platform_grabbed(Platform):
 	match Platform.name:
 		"Basic Platform":
 			PlatformEditor.frame = 0
-		"Basic Platform2":
-			PlatformEditor.frame = 0
-		"Basic Platform3":
-			PlatformEditor.frame = 0
 		"SquarePlatform":
 			PlatformEditor.frame = 1
 		"OneByThreePlatform":
 			PlatformEditor.frame = 2
+		"Curve":
+			PlatformEditor.frame = 3
 	
 	# Update the rotation text box to match the selected platform
 	RotationInputBox.text = str(int(round(fmod(Platform.rotation_degrees, 360.0))))

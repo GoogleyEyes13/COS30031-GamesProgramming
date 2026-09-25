@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bdlmo7l7174cw" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorOneByThree.png" id="13_q1ws5"]
 [ext_resource type="Texture2D" uid="uid://dajq5tldqwphr" path="res://Assets/Images/LevelUI/ExitButtonPressed.png" id="13_ug0sv"]
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_0wsr5"]
+[ext_resource type="Texture2D" uid="uid://bktcv5gdv10b5" path="res://Assets/Images/LevelUI/PlatformEditors/PlatformEditorCurve.png" id="15_4rcpl"]
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/Objects/1x3Block.tscn" id="16_0wsr5"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="16_ug0sv"]
 [ext_resource type="PackedScene" uid="uid://s8a4dv82ubvt" path="res://Scenes/Objects/2x2Curve.tscn" id="20_ulvkb"]
@@ -43,6 +44,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_q1ws5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4rcpl")
 }],
 "loop": 1,
 "name": &"default",
@@ -187,7 +191,7 @@ position = Vector2(812, 583)
 [node name="SquarePlatform" parent="PlatformSelections" unique_id=502299360 instance=ExtResource("16_ug0sv")]
 position = Vector2(1042, 583)
 
-[node name="2x2Curve" parent="PlatformSelections" unique_id=1108970176 instance=ExtResource("20_ulvkb")]
+[node name="Curve" parent="PlatformSelections" unique_id=1108970176 instance=ExtResource("20_ulvkb")]
 position = Vector2(578, 582)
 
 [node name="Pickups" type="CanvasLayer" parent="." unique_id=542252654]
