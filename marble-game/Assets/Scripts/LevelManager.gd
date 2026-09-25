@@ -18,6 +18,9 @@ var MovedPlatforms: Array = []
 # Sound effects
 @onready var ButtonClick = $ButtonClick
 
+# Music
+@onready var BackgroundMusic = $SwinGameBeat
+
 @onready var LevelStarted = false
 signal StartLevel
 

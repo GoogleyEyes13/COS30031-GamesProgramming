@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsy4dvqkpjy3m"
-path="res://.godot/imported/1x2Bouncy.png-96248e0c0eb7ca9bc8dd9edc8d14e894.ctex"
+uid="uid://bd6yrsyeyqj0t"
+path="res://.godot/imported/Marble.png-d6e9b38ca4ef64db702ac7e2d5e83b3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Platforms/BuildingBlocks/1x2Bouncy.png"
-dest_files=["res://.godot/imported/1x2Bouncy.png-96248e0c0eb7ca9bc8dd9edc8d14e894.ctex"]
+source_file="res://Assets/Images/Marble.png"
+dest_files=["res://.godot/imported/Marble.png-d6e9b38ca4ef64db702ac7e2d5e83b3d.ctex"]
 
 [params]
 

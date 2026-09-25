@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dfw70myqgeal4"]
 
+[ext_resource type="Script" uid="uid://bcped6gjhh2yl" path="res://Assets/Scripts/Platform.gd" id="1_hj6f4"]
 [ext_resource type="Texture2D" uid="uid://dldwe8wigm8jj" path="res://Assets/Images/Platforms/BuildingBlocks/SquareBlock.png" id="1_wneuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrbih"]
 size = Vector2(96, 48)
 
-[node name="1x2Convey" type="StaticBody2D" unique_id=444882055]
+[node name="1x2Convey" type="CharacterBody2D" unique_id=1524144308]
+script = ExtResource("1_hj6f4")
 
 [node name="SquareBlock" type="Sprite2D" parent="." unique_id=1905253175]
 position = Vector2(-24, 0)

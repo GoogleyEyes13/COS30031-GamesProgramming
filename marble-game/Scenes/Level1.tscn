@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://h8jo6b4mdd5x" path="res://Assets/Images/Border/BottomAndTopWall.png" id="27_1nrjw"]
 [ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/PlatformDrop.mp3" id="29_iswit"]
 [ext_resource type="AudioStream" uid="uid://dag23expmxdxv" path="res://Assets/SFX/PlatformGrab.mp3" id="30_ud1sj"]
+[ext_resource type="AudioStream" uid="uid://cc1hh6uvpm0os" path="res://Assets/Music/SwinGame_Beat.mp3" id="31_qvja8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
 animations = [{
@@ -256,7 +257,7 @@ position = Vector2(-622, 348)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]
-position = Vector2(35, 57)
+position = Vector2(245, 71)
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="." unique_id=1873432992]
 stream = ExtResource("2_bqkvc")
@@ -267,6 +268,12 @@ stream = ExtResource("30_ud1sj")
 [node name="PlatformDrop" type="AudioStreamPlayer" parent="." unique_id=1697223446]
 stream = ExtResource("29_iswit")
 volume_db = -5.0
+
+[node name="SwinGameBeat" type="AudioStreamPlayer" parent="." unique_id=375012586]
+stream = ExtResource("31_qvja8")
+volume_db = -11.357
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]

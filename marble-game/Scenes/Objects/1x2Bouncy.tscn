@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://rowvxktipx5x"]
 
-[ext_resource type="Texture2D" uid="uid://bsy4dvqkpjy3m" path="res://Assets/Images/Platforms/BuildingBlocks/1x2Bouncy.png" id="1_aohjf"]
+[ext_resource type="Script" uid="uid://bcped6gjhh2yl" path="res://Assets/Scripts/Platform.gd" id="1_1qewg"]
+[ext_resource type="Texture2D" uid="uid://bsy4dvqkpjy3m" path="res://Assets/Images/Platforms/1x2Bouncy.png" id="1_aohjf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrbih"]
 size = Vector2(96, 48)
 
-[node name="1x2Bouncy" type="StaticBody2D" unique_id=444882055]
+[node name="1x2Bouncy" type="CharacterBody2D" unique_id=520105822]
+script = ExtResource("1_1qewg")
 
 [node name="SquareBlock" type="Sprite2D" parent="." unique_id=1905253175]
 texture = ExtResource("1_aohjf")

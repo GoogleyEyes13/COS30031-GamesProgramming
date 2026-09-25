@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://del2jee21r1aa" path="res://Assets/Images/Marble/MarbleBeigeOrange.png" id="6_xb30t"]
 [ext_resource type="Texture2D" uid="uid://pxyv838r0vxw" path="res://Assets/Images/Marble/MarbleGreenOrange.png" id="7_ow5lo"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ud1sj"]
+bounce = 0.5
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
 "frames": [{
@@ -49,6 +52,7 @@ script = ExtResource("1_4ln81")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=830943883]
 mass = 0.5
+physics_material_override = SubResource("PhysicsMaterial_ud1sj")
 gravity_scale = 1.4
 
 [node name="Marble" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=1667118829]
