@@ -1,7 +1,46 @@
 [gd_scene format=3 uid="uid://cjdgiss2fml2h"]
 
-[ext_resource type="Texture2D" uid="uid://bd6yrsyeyqj0t" path="res://Assets/Images/Marble.png" id="1_2v8fe"]
+[ext_resource type="Texture2D" uid="uid://bd6yrsyeyqj0t" path="res://Assets/Images/Marble/Marble.png" id="1_2v8fe"]
 [ext_resource type="Script" uid="uid://dflbgp08uvcfq" path="res://Assets/Scripts/Marble.gd" id="1_4ln81"]
+[ext_resource type="Texture2D" uid="uid://bwtgifo0nr12x" path="res://Assets/Images/Marble/MarbleBlank.png" id="1_lbpc1"]
+[ext_resource type="Texture2D" uid="uid://b5ek3hbegpvyl" path="res://Assets/Images/Marble/MarbleBeige.png" id="2_sh5f3"]
+[ext_resource type="Texture2D" uid="uid://c4i0ymbbxk2ym" path="res://Assets/Images/Marble/MarbleGreen.png" id="3_iefmb"]
+[ext_resource type="Texture2D" uid="uid://cri8onxdpnwoh" path="res://Assets/Images/Marble/MarbleOrange.png" id="4_ft0ua"]
+[ext_resource type="Texture2D" uid="uid://dwht7kugay1sf" path="res://Assets/Images/Marble/MarbleBeigeGreen.png" id="5_71pvi"]
+[ext_resource type="Texture2D" uid="uid://del2jee21r1aa" path="res://Assets/Images/Marble/MarbleBeigeOrange.png" id="6_xb30t"]
+[ext_resource type="Texture2D" uid="uid://pxyv838r0vxw" path="res://Assets/Images/Marble/MarbleGreenOrange.png" id="7_ow5lo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lbpc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sh5f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iefmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ft0ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_71pvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xb30t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ow5lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2v8fe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ln81"]
 
@@ -12,10 +51,10 @@ script = ExtResource("1_4ln81")
 mass = 0.5
 gravity_scale = 1.4
 
-[node name="Marble" type="Sprite2D" parent="RigidBody2D" unique_id=585041648]
+[node name="Marble" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=1667118829]
 texture_filter = 1
 rotation = 0.6981317
-texture = ExtResource("1_2v8fe")
+sprite_frames = SubResource("SpriteFrames_yf5fn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=12159089]
 scale = Vector2(2.39, 2.39)
