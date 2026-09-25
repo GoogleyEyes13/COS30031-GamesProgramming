@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b20pmdcjjblvj"]
 
 [ext_resource type="Script" uid="uid://bdyc8mw7liplp" path="res://Assets/Scripts/LevelManager.gd" id="1_6ll4n"]
-[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/universfield-interface-click-124476.mp3" id="2_bqkvc"]
+[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/ButtonClick.mp3" id="2_bqkvc"]
 [ext_resource type="Texture2D" uid="uid://bcwfy5entqxr5" path="res://Assets/Images/LevelUI/UIPlatformBackground.png" id="2_q12u6"]
 [ext_resource type="Texture2D" uid="uid://cbs2gh4c3fe3w" path="res://Assets/Images/Platforms/Level1Course.png" id="2_ulvkb"]
 [ext_resource type="Texture2D" uid="uid://cd1pd10qthi3h" path="res://Assets/Images/LevelUI/MenuButtonNormal.png" id="3_jghel"]
@@ -28,7 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://ccxvjk8kui6n4" path="res://Assets/Images/Pickups/PickupOrange.png" id="25_bhaf5"]
 [ext_resource type="Texture2D" uid="uid://geeoic6k74hh" path="res://Assets/Images/Border/SideWall.png" id="26_o0dvq"]
 [ext_resource type="Texture2D" uid="uid://h8jo6b4mdd5x" path="res://Assets/Images/Border/BottomAndTopWall.png" id="27_1nrjw"]
-[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/freesound_community-wood-door-knock-106669.mp3" id="29_iswit"]
+[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/PlatformDrop.mp3" id="29_iswit"]
+[ext_resource type="AudioStream" uid="uid://dag23expmxdxv" path="res://Assets/SFX/PlatformGrab.mp3" id="30_ud1sj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
 animations = [{
@@ -260,8 +261,12 @@ position = Vector2(35, 57)
 [node name="ButtonClick" type="AudioStreamPlayer" parent="." unique_id=1873432992]
 stream = ExtResource("2_bqkvc")
 
-[node name="PlatformGrab" type="AudioStreamPlayer" parent="." unique_id=1697223446]
+[node name="PlatformGrab" type="AudioStreamPlayer" parent="." unique_id=542649031]
+stream = ExtResource("30_ud1sj")
+
+[node name="PlatformDrop" type="AudioStreamPlayer" parent="." unique_id=1697223446]
 stream = ExtResource("29_iswit")
+volume_db = -5.0
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]

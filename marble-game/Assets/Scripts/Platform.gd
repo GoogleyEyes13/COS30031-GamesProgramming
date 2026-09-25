@@ -10,6 +10,7 @@ var grab_offset: Vector2
 
 # Sound effects
 @onready var PlatformGrab = $"../../PlatformGrab"
+@onready var PlatformDrop = $"../../PlatformDrop"
 
 
 func _process(delta: float) -> void:
@@ -33,6 +34,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			if is_grabbed:
+				PlatformDrop.play()
 				is_grabbed = false
 
 

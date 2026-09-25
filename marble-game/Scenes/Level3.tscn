@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/Objects/1x3Block.tscn" id="16_ktnig"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="17_nfsas"]
 [ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="20_5pcch"]
-[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/universfield-interface-click-124476.mp3" id="20_85b6l"]
-[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/freesound_community-wood-door-knock-106669.mp3" id="21_85b6l"]
+[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/ButtonClick.mp3" id="20_85b6l"]
+[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/PlatformDrop.mp3" id="21_85b6l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_85b6l"]
 animations = [{

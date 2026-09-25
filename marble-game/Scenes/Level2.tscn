@@ -18,9 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://bc20mryfdavd4" path="res://Assets/Images/LevelUI/ExitButtonHover.png" id="14_utdxf"]
 [ext_resource type="PackedScene" uid="uid://babtnl6mvg0uc" path="res://Scenes/Objects/1x3Block.tscn" id="16_xx40l"]
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="17_utdxf"]
-[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/universfield-interface-click-124476.mp3" id="20_6cjmx"]
+[ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/ButtonClick.mp3" id="20_6cjmx"]
 [ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="20_bgqvi"]
-[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/freesound_community-wood-door-knock-106669.mp3" id="21_6cjmx"]
+[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/PlatformDrop.mp3" id="21_6cjmx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6cjmx"]
 animations = [{
