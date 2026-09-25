@@ -178,20 +178,25 @@ position = Vector2(1042, 583)
 [node name="2x2Curve" parent="PlatformSelections" unique_id=1108970176 instance=ExtResource("20_ulvkb")]
 position = Vector2(578, 582)
 
-[node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]
-position = Vector2(35, 57)
+[node name="Pickups" type="CanvasLayer" parent="." unique_id=542252654]
 
-[node name="Green" parent="." unique_id=1838910236 instance=ExtResource("22_fh0sh")]
+[node name="Green" parent="Pickups" unique_id=1838910236 instance=ExtResource("22_fh0sh")]
 position = Vector2(427.00003, 234)
 texture = ExtResource("23_03od6")
+PickupType = "Green"
 
-[node name="Beige" parent="." unique_id=1406982968 instance=ExtResource("22_fh0sh")]
+[node name="Beige" parent="Pickups" unique_id=1406982968 instance=ExtResource("22_fh0sh")]
 position = Vector2(523, 234)
 texture = ExtResource("24_384de")
+PickupType = "Beige"
 
-[node name="Orange" parent="." unique_id=1381004944 instance=ExtResource("22_fh0sh")]
+[node name="Orange" parent="Pickups" unique_id=1381004944 instance=ExtResource("22_fh0sh")]
 position = Vector2(617.00006, 234)
 texture = ExtResource("25_bhaf5")
+PickupType = "Orange"
+
+[node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]
+position = Vector2(35, 57)
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]
