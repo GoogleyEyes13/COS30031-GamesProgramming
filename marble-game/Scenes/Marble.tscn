@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://pxyv838r0vxw" path="res://Assets/Images/Marble/MarbleGreenOrange.png" id="7_ow5lo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ud1sj"]
-bounce = 0.5
+bounce = 0.4
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
