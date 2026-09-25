@@ -44,8 +44,11 @@ func _input(event) -> void:
 				platform.visible = false
 				
 				var collision = platform.get_node_or_null("CollisionShape2D")
+				var collision_polygon = platform.get_node_or_null("CollisionPolygon2D")
 				if collision:
 					collision.disabled = true
+				elif collision_polygon:
+					collision_polygon.disabled = true
 		
 		# Emitting level start signal to drop the marble
 		StartLevel.emit()
