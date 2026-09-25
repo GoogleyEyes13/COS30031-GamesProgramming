@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://bsscroutj2o8n" path="res://Assets/Images/Pickups/PickupGreen.png" id="23_03od6"]
 [ext_resource type="Texture2D" uid="uid://ccstjkyo5yit" path="res://Assets/Images/Pickups/PickupBeige.png" id="24_384de"]
 [ext_resource type="Texture2D" uid="uid://ccxvjk8kui6n4" path="res://Assets/Images/Pickups/PickupOrange.png" id="25_bhaf5"]
+[ext_resource type="Texture2D" uid="uid://geeoic6k74hh" path="res://Assets/Images/Border/SideWall.png" id="26_o0dvq"]
+[ext_resource type="Texture2D" uid="uid://h8jo6b4mdd5x" path="res://Assets/Images/Border/BottomAndTopWall.png" id="27_1nrjw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
 animations = [{
@@ -50,6 +52,12 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yji5v"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhaf5"]
+size = Vector2(48, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1248, 48)
 
 [node name="Level1" type="Node2D" unique_id=1786507126]
 script = ExtResource("1_6ll4n")
@@ -194,6 +202,54 @@ PickupType = "Beige"
 position = Vector2(617.00006, 234)
 texture = ExtResource("25_bhaf5")
 PickupType = "Orange"
+
+[node name="Borders" type="CanvasLayer" parent="." unique_id=958654257]
+
+[node name="SideWall1" type="CharacterBody2D" parent="Borders" unique_id=128138827]
+texture_filter = 1
+position = Vector2(-4, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Borders/SideWall1" unique_id=1498391376]
+texture = ExtResource("26_o0dvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/SideWall1" unique_id=1953922874]
+position = Vector2(-20, 0)
+shape = SubResource("RectangleShape2D_bhaf5")
+
+[node name="SideWall2" type="CharacterBody2D" parent="Borders" unique_id=1853201273]
+texture_filter = 1
+position = Vector2(1196, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Borders/SideWall2" unique_id=1109358841]
+texture = ExtResource("26_o0dvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/SideWall2" unique_id=442551733]
+position = Vector2(-20, 0)
+shape = SubResource("RectangleShape2D_bhaf5")
+
+[node name="BottomWall" type="CharacterBody2D" parent="Borders" unique_id=2306462]
+texture_filter = 1
+position = Vector2(1198, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Borders/BottomWall" unique_id=1213053958]
+position = Vector2(-622, 328)
+texture = ExtResource("27_1nrjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BottomWall" unique_id=80894549]
+position = Vector2(-622, 348)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="TopWall" type="CharacterBody2D" parent="Borders" unique_id=1571482779]
+texture_filter = 1
+position = Vector2(1198, -372)
+
+[node name="Sprite2D" type="Sprite2D" parent="Borders/TopWall" unique_id=96406124]
+position = Vector2(-622, 328)
+texture = ExtResource("27_1nrjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/TopWall" unique_id=2041472219]
+position = Vector2(-622, 348)
+shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Marble" parent="." unique_id=1397272568 instance=ExtResource("21_ulvkb")]
 position = Vector2(35, 57)
