@@ -158,6 +158,10 @@ stream = ExtResource("20_85b6l")
 [node name="PlatformGrab" type="AudioStreamPlayer" parent="." unique_id=1177796563]
 stream = ExtResource("21_85b6l")
 
+[node name="PlatformDrop" type="AudioStreamPlayer" parent="." unique_id=527740544]
+stream = ExtResource("21_85b6l")
+volume_db = -5.0
+
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PlatformEditor/ExitButton" to="." method="_on_exit_button_pressed"]
