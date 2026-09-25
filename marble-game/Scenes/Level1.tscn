@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://ccxvjk8kui6n4" path="res://Assets/Images/Pickups/PickupOrange.png" id="25_bhaf5"]
 [ext_resource type="Texture2D" uid="uid://geeoic6k74hh" path="res://Assets/Images/Border/SideWall.png" id="26_o0dvq"]
 [ext_resource type="Texture2D" uid="uid://h8jo6b4mdd5x" path="res://Assets/Images/Border/BottomAndTopWall.png" id="27_1nrjw"]
+[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/freesound_community-wood-door-knock-106669.mp3" id="29_iswit"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ug0sv"]
 animations = [{
@@ -257,6 +258,9 @@ position = Vector2(35, 57)
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="." unique_id=1873432992]
 stream = ExtResource("2_bqkvc")
+
+[node name="PlatformGrab" type="AudioStreamPlayer" parent="." unique_id=1697223446]
+stream = ExtResource("29_iswit")
 
 [connection signal="pressed" from="UI/Menu Bar/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI/Menu Bar/RestartButton" to="." method="_on_restart_button_pressed"]

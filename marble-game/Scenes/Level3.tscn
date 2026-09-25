@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://boqbcqwscstha" path="res://Scenes/Objects/2x2Block.tscn" id="17_nfsas"]
 [ext_resource type="PackedScene" uid="uid://cjdgiss2fml2h" path="res://Scenes/Marble.tscn" id="20_5pcch"]
 [ext_resource type="AudioStream" uid="uid://cmr3c60xmr2rn" path="res://Assets/SFX/universfield-interface-click-124476.mp3" id="20_85b6l"]
+[ext_resource type="AudioStream" uid="uid://wa7p2ns1onfp" path="res://Assets/SFX/freesound_community-wood-door-knock-106669.mp3" id="21_85b6l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_85b6l"]
 animations = [{
@@ -153,6 +154,9 @@ position = Vector2(35, 57)
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="." unique_id=244738568]
 stream = ExtResource("20_85b6l")
+
+[node name="PlatformGrab" type="AudioStreamPlayer" parent="." unique_id=1177796563]
+stream = ExtResource("21_85b6l")
 
 [connection signal="pressed" from="UI Menu Bar Background/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="UI Menu Bar Background/RestartButton" to="." method="_on_restart_button_pressed"]
