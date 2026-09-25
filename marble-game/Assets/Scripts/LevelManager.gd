@@ -58,6 +58,10 @@ func _input(event) -> void:
 		
 		# Emitting level start signal to drop the marble
 		StartLevel.emit()
+		
+		# Start timers for all moved platforms
+		for platform in MovedPlatforms:
+			platform.start_timer()
 	
 	if event.is_action_pressed("Menu"):
 		_on_menu_button_pressed()
@@ -105,6 +109,8 @@ func _on_platform_grabbed(Platform):
 	
 	# Update the rotation text box to match the selected platform
 	RotationInputBox.text = str(int(round(fmod(Platform.rotation_degrees, 360.0))))
+	# Update the timer text box to match the selected platform
+	TimerInputBox.text = str(Platform.PlatformTimer)
 	
 	PlatformEditor.visible = true
 
@@ -132,6 +138,7 @@ func _on_timer_input_box_text_submitted(new_text: String) -> void:
 		return
 	
 	PlatformTimer = float(new_text)
+	SelectedPlatform.set_timer(PlatformTimer)
 
 	# Update input label
 	TimerInputBox.text = str(PlatformTimer)

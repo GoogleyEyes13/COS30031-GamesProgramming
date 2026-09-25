@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 var is_grabbed: bool = false
 
+# Platform timer
+@onready var PlatformTimerBox = $"../../UI/PlatformEditor/TimerInputBox"
+var PlatformTimer: float = 5.0
+
 # Signal to send to level manager when platform is grabbed
 signal PlatformGrabbed
 
@@ -40,3 +44,23 @@ func _input(event: InputEvent) -> void:
 
 func rotate_platform(Rotation) -> void:
 	rotation_degrees = Rotation
+
+
+func set_timer(Timer) -> void:
+	PlatformTimer = Timer
+
+
+func start_timer() -> void:
+	await get_tree().create_timer(PlatformTimer).timeout
+	
+	# Disable platform collisions
+	var collision = get_node_or_null("CollisionShape2D")
+	var collision_polygon = get_node_or_null("CollisionPolygon2D")
+	
+	if collision:
+		collision.disabled = true
+	elif collision_polygon:
+		collision_polygon.disabled = true
+	
+	# Hide the platform
+	visible = false
